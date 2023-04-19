@@ -3,15 +3,6 @@ Aqui van todas las funciones o variables relacionadas
 con la manipulación del DOM en la aplicación
 */
 
-/****** MODAL ******/
-/*const button = document.getElementById("addCity");
-const input = document.getElementById("buscarModal");
-
-button.addEventListener("shown.bs.modal", () => {
-  input.focus();
-});*/
-/*fin MODAL */
-
 const $ = (selector) => document.querySelector(selector);
 
 const newCard = (obj) => {
