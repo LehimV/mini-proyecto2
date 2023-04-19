@@ -51,7 +51,7 @@ const showCards = (arr) => {
     cities.appendChild(card);
   });
 
-  //Cantidad de cards para las stays
+  //Numero de cards para las stays
   const numStays = document.querySelector("#stays");
   numStays.textContent = `${arr.length}+ Stays`;
 };

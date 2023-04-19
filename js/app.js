@@ -42,14 +42,3 @@ citiesList.forEach((city) => {
   });
       addCity.value = citiesList[0];
 });*/
-
-////RESPALDO
-/*const datos = await data.getData(URL);
-const citiesList = data.getCities(datos);
-console.log("Lista de ciudades:", citiesList);
-
-datos.forEach((element) => {
-  const card = dom.newCard(element);
-  console.log(element);
-  dom.$("#cities").appendChild(card);
-});*/

@@ -22,7 +22,7 @@ const getCategories = (data) => {
   return categories;
 };
 
-/***FIltro de las ciudades***/
+/*** FIltro de las ciudades ***/
 const getCities = (data) => {
   const cities = data.map((element) => element.city);
 
@@ -30,7 +30,7 @@ const getCities = (data) => {
   return uniqueCities;
 };
 
-/** Funcion Filtro para mostralas en las cards**/
+/*** Funcion Filtro para mostralas en las cards ***/
 const filterByCity = (data, city) => {
   return data.filter((element) => element.city === city);
 };

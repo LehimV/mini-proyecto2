@@ -8,11 +8,10 @@ font-family: 'Mulish', sans-serif;
   padding: 0px;
   font-family: "Montserrat", sans-serif;
 }
-
+/*Variables*/
 :root {
   --orange: #eb5757;
 }
-
 .c-orange {
   color: var(--orange);
 }
