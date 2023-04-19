@@ -10,7 +10,7 @@ const URL = "./js/stays.json";
 const datos = await data.getData(URL);
 const citiesList = data.getCities(datos);
 console.log("Lista de ciudades:", citiesList);
-console.log("Lista de elementops:", datos);
+console.log("Lista de elementos:", datos);
 
 datos.forEach((element) => {
   const card = dom.newCard(element);
@@ -20,9 +20,16 @@ datos.forEach((element) => {
 citiesList.forEach((city) => {
   const ciudad = dom.ciudades(city);
   dom.$("#optionCity").appendChild(ciudad);
+  ciudad.addEventListener("click", () => {
+    const filteredCities = data.filterByCity(datos, city);
+    dom.showCards(filteredCities);
+    //Mostrar ciudad
+    dom.$("#showCity").textContent = city + ", Finland";
+    dom.$("#addCity").innerHTML = `<span class="fw-bold text-dark">${city}, Finland</span>`;
+  });
 });
 
-/////
+///// ALTERNATIVO
 /*optionCity.addEventListener("show.bs.modal", function () {
   console.log("Muestra show.bs.modal activado");
   const citiesList = data.getCities(datos);
@@ -36,7 +43,7 @@ citiesList.forEach((city) => {
       addCity.value = citiesList[0];
 });*/
 
-////ORIGINAL
+////RESPALDO
 /*const datos = await data.getData(URL);
 const citiesList = data.getCities(datos);
 console.log("Lista de ciudades:", citiesList);

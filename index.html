@@ -36,23 +36,23 @@
     <link rel="stylesheet" href="./css/styles.css" />
 
     <script src="./js/app.js" defer type="module"></script>
-    <title>Document</title>
+    <title>ProyectoFinal-2-MLVL</title>
   </head>
 
   <body class="container">
     <header
-      class="d-flex flex-column flex-md-row justify-content-around align-items-center mt-lg-4 mt-3 gap-5"
+      class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-lg-4 mt-3 gap-5"
     >
       <div class="d-flex align-self-start align-self-md-center">
         <img src="./img/logo.png" alt="logo" />
       </div>
 
       <!----- B O T O N E S ----->
-      <article class="d-flex rounded-4">
+      <article class="d-flex rounded-4 shadow-sm">
         <button
           type="button"
           id="addCity"
-          class="addCity p-3 m-0 btn border border-end-0 rounded-start-4 rounded-end-0 cursor-text"
+          class="addCity p-3 m-0 btn border border-end-1 rounded-start-4 rounded-end-0"
           data-bs-toggle="modal"
           data-bs-target="#buscarModal"
         >
@@ -61,16 +61,16 @@
         <button
           type="button"
           id="addGuest"
-          class="addGuest p-3 m-0 btn border border-start-0 rounded-start-0 rounded-end-0 cursor-text"
+          class="addGuest p-3 m-0 btn border border-start-0 rounded-start-0 rounded-end-0"
         >
           Add guests
         </button>
-        <!--MENU FILTRO <div id="menuFilter" class="menuFilter"></div>-->
+
         <!-- Icono Search de google Icons -->
         <button
           type="button"
           id="buttonSearch"
-          class="material-symbols-outlined buscar text-danger p-3 border border1 border-start-0 rounded-start-0 rounded-end-4 pointer"
+          class="material-symbols-outlined text-danger p-3 border border1 border-start-0 rounded-start-0 rounded-end-4 pointer"
         >
           search
         </button>
@@ -85,8 +85,7 @@
         >
           <div class="modal-dialog">
             <div class="modal-content h-50">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <div class="modal-header border border-0">
                 <button
                   type="button"
                   class="btn-close"
@@ -94,9 +93,32 @@
                   aria-label="Close"
                 ></button>
               </div>
+              <div class="container">
+                <div
+                  id="locationGuest"
+                  class="row row-cols-1 row-cols-md-2 row-cols-lg-2 justify-content-center"
+                >
+                  <div
+                    id="modalNavSearch"
+                    class="modalNavSearch d-flex flex-column border border-1 border-black rounded-4 p-2"
+                  >
+                    <!--border-2 border-start-1 rounded-start-4 rounded-end-0-->
+                    <div class="txt-locGuest fw-bold ms-2">LOCATION</div>
+                    <div id="showCity" class="txt-addCG ms-2">City, Finland</div>
+                  </div>
+                  <div
+                    id="modalNavSearch"
+                    class="modalNavSearch d-flex flex-column border border-1 border-black rounded-4 p-2"
+                  >
+                    <!--border-2 border-start-0 rounded-start-0 rounded-end-4-->
+                    <span class="txt-locGuest fw-bold ms-2">GUEST</span>
+                    <span class="txt-addCG align-baseline ms-2">Add Guests</span>
+                  </div>
+                </div>
+              </div>
               <div id="optionCity" class="modal-body"></div>
               <div class="modal-footer">
-                <button type="button" class="btn">Search</button>
+                <button id="btn_modalSearch" type="button" class="btn">Search</button>
               </div>
             </div>
           </div>
@@ -106,12 +128,12 @@
     </header>
     <main>
       <div class="d-flex mt-5 justify-content-between">
-        <h1 class="fs-3">
+        <h1 class="fs-3 fw-bold">
           Stays in Finland
           <!-- Aquí va el lugar -->
           <span id="place"></span>
         </h1>
-        <p><span id="stays"></span> Stays</p>
+        <p><span id="stays">12+ Stays</span></p>
       </div>
 
       <section class="container text-center">
@@ -120,43 +142,8 @@
         </div>
       </section>
     </main>
+    <footer>
+      <div><br /></div>
+    </footer>
   </body>
 </html>
-
-<!--<div class="col card-img">
-            <div class="img">
-              <img
-                class="w-100 rounded-4"
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2249&q=80"
-                alt="image"
-              />
-            </div>
-            <div class="main_info d-flex justify-content-between mt-3">
-              <p class="d-flex flex-row">
-                <span
-                  class="super_host borderr border border-secondary rounded-4 fw-bold text-body-secondary"
-                >
-                  SUPER HOST
-                </span>
-                <span class="text-body-secondary ms-2">Entire apartment . 2 beds</span>
-              </p>
-              <div>
-                <span class="material-symbols-outlined"> star </span>
-                <span class="rating align-top">4.40</span>
-              </div>
-            </div>
-
-            <div class="second_info text-start d-flex">
-              <span class="fw-bold">Stylist apartment in center of the city</span>
-            </div>
-          </div>
-        -->
-
-<!--<span class="material-symbols-outlined"> location_on </span>
-                Finland <br />
-                <span class="material-symbols-outlined"> location_on </span>
-                Finland <br />
-                <span class="material-symbols-outlined"> location_on </span>
-                Finland <br />
-                <span class="material-symbols-outlined"> location_on </span>
-                Finland <br />-->

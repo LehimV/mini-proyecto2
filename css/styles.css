@@ -1,6 +1,12 @@
+/* Font Family 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Mulish', sans-serif;
+*/
+
 * {
   margin: 0px;
   padding: 0px;
+  font-family: "Montserrat", sans-serif;
 }
 
 :root {
@@ -19,19 +25,58 @@
   font-variation-settings: "wght" 700, "GRAD" 200, "opsz" 48;
 }
 
-.btn {
-  --bs-btn-color: black;
+#addCity,
+#addGuest {
+  font-family: "Mulish", sans-serif;
+  --bs-btn-color: lightgrey;
   --bs-btn-bg: white;
   --bs-btn-hover-color: white;
   --bs-btn-hover-bg: var(--orange);
   --bs-btn-border-color: rgb(207, 205, 205);
+  --bs-btn-active-color: var(--orange);
+  --bs-btn-active-bg: white;
+  --bs-btn-active-border-color: var(--orange);
 }
 
+#btn_modalSearch {
+  font-family: "Mulish", sans-serif;
+  --bs-btn-bg: var(--orange);
+  --bs-btn-color: white;
+  --bs-btn-hover-bg: #eb5757;
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-border-color: white;
+  --bs-btn-active-color: var(--orange);
+  --bs-btn-active-bg: white;
+  --bs-btn-active-border-color: var(--orange);
+}
 /*MODAL*/
 .modal {
+  font-family: "Mulish", sans-serif;
   transition: transform 0.5s;
   transform: translateY(-3%);
   --bs-modal-width: 90%;
+}
+.txt-locGuest {
+  font-size: 10px;
+}
+
+.txt-addCG {
+  font-size: 12px;
+}
+
+.listCity {
+  display: flex;
+}
+
+.btn_city {
+  --bs-btn-hover-color: var(--orange);
+  --bs-btn-hover-border-color: white;
+  --bs-btn-active-color: white;
+  --bs-btn-active-bg: var(--orange);
+}
+
+.modalNavSearch {
+  max-width: 40%;
 }
 
 @media screen and (max-width: 575px) {
@@ -40,15 +85,18 @@
     --bs-modal-height: 90%;
   }
 
+  #btn_modalSearch {
+    margin: auto;
+  }
+
   #container-img {
     max-height: 230px;
   }
-}
 
-/* Font Family 
-font-family: 'Montserrat', sans-serif;
-font-family: 'Mulish', sans-serif;
-*/
+  #modalNavSearch {
+    max-width: 80%;
+  }
+}
 
 #container-img {
   max-height: 230px;
@@ -62,6 +110,7 @@ font-family: 'Mulish', sans-serif;
 }
 
 .super_host {
+  font-family: "Mulish", sans-serif;
   font-size: 10px;
 }
 
@@ -70,26 +119,14 @@ font-family: 'Mulish', sans-serif;
 }
 
 .info_1 {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .second_info {
   font-size: 14px;
-  /*margin: -10px;*/
 }
-
-/*.rating {
-  display: inline-block;
-  font-size: 12px;
-  vertical-align: middle;
-}*/
 
 .material-symbols-outlined {
   color: var(--orange);
   font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 48;
 }
-
-/*.material-symbols-outlined:hover {
-  color: white;
-  
-}*/

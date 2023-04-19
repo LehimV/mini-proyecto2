@@ -4,7 +4,7 @@ con la manipulación de los datos de la aplicacion
 */
 
 const getData = async () => {
-  // Obytener los datos del archivo 'stays.json'
+  // Obtener los datos del archivo 'stays.json'
   const data = fetch("./stays.json")
     .then((response) => response.json())
     .then((json) => json);
@@ -22,7 +22,7 @@ const getCategories = (data) => {
   return categories;
 };
 
-/***FILTRO DE CIUDADES***/
+/***FIltro de las ciudades***/
 const getCities = (data) => {
   const cities = data.map((element) => element.city);
 
@@ -30,8 +30,14 @@ const getCities = (data) => {
   return uniqueCities;
 };
 
+/** Funcion Filtro para mostralas en las cards**/
+const filterByCity = (data, city) => {
+  return data.filter((element) => element.city === city);
+};
+
 export default {
   getData,
   getCategories,
   getCities,
+  filterByCity,
 };
